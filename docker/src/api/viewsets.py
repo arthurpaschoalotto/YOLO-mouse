@@ -3,5 +3,5 @@ from src.api import serializers
 from src import models
 
 class UsuariosViewSet(viewsets.ModelViewSet):
-    serializer_class = serializers.UsersSerializer
+    serializer_class = serializers.UsuariosSerializer
     queryset = models.Usuarios.objects.all()
