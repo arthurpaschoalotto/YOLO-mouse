@@ -2,11 +2,11 @@ import cv2
 import torch
 import datetime
 
-# Carrega o modelo YOLOv5 treinado
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='../yolov5/runs/train/exp8/weights/best.pt')
+# Carrega o modelo YOLOv5 treinado, só localiza o path com o arquivo de treino
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')
 
 # Define as classes de objetos que o modelo é capaz de detectar
-classes = ['classe1', 'classe2', 'classe3']
+classes = ['classe1']
 
 # Inicializa a webcam
 cap = cv2.VideoCapture(0)
@@ -34,16 +34,15 @@ while True:
         cv2.putText(frame, classes[cls], (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
 ###############################################################
         # Captura uma imagem da webcam
-        ret, frame = cap.read()
+        #ret, frame = cap.read()
 
         # Define o nome do arquivo de saída
-        filename = 'imagem_' + str(datetime.now().strftime("%Y%m%d_%H%M%S")) + '.jpg'
+        #filename = 'imagem_' + str(datetime.now().strftime("%Y%m%d_%H%M%S")) + '.jpg'
 
-        # Salva a imagem em disco
-        cv2.imwrite(filename, frame)
+        # Posta o arquivo
 
         # Exibe uma mensagem de confirmação
-        print('Imagem salva como', filename)
+        # print('Imagem salva como', filename)
 ###############################################################
 
     # Exibe o frame com as detecções na tela

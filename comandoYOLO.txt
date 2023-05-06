@@ -1,0 +1,1 @@
+python \Users\Arthur\Desktop\Desafio\yolov5\train.py --img 416 --batch 12 --epochs 40 --data \Users\Arthur\Desktop\Desafio\compvismouse\yolo.yaml --cfg \Users\Arthur\Desktop\Desafio\yolov5\models\yolov5s.yaml --weights weights/yolov5s.pt
