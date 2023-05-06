@@ -1,0 +1,5 @@
+train: /Users/Arthur/Desktop/Desafio/datamousenew/train/images  # Caminho para a pasta de imagens de treinamento
+val: /Users/Arthur/Desktop/Desafio/datamousenew/val/images  # Caminho para a pasta de imagens de validação (opcional)
+nc: 1  # Número de classes (carros e pedestres)
+names: ['mouse']  # Nomes das classes
+label_files: ['/Users/Arthur/Desktop/Desafio/datamousenew/train/labels', '/Users/Arthur/Desktop/Desafio/datamousenew/val/labels']  # Caminho para o arquivo de texto contendo as caixas delimitadoras
